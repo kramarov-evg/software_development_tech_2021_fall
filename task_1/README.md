@@ -26,25 +26,38 @@ Personally I'd recommend using JDK version 11. It's a widely supported version. 
 
 ### Windows
 1. Go to the [official website download page](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) and download version 11.0.11 as `.exe` for Windows 10 x64 (Refer to the screenshot below).
+
 ![Download option selection](./res/java_download_page_windows.png)
-1. Accept agreement.
+
+2. Accept agreement.
+
 ![Agreement prompt screenshot](./res/java_download_page_agreement_windows.png)
-1. Log into your Oracle account or create one, if you don't have it yet.
-1. Once you log in, your download should start.
-1. Once the download is over, head to the folder you saved the installer to and run it.
-1. After running the installer, remember or write down the path where Java will be installed. It will be later reffered to as `java_path`. Other options may be left with default values.
+
+3. Log into your Oracle account or create one, if you don't have it yet.
+4. Once you log in, your download should start.
+5. Once the download is over, head to the folder you saved the installer to and run it.
+6. After running the installer, remember or write down the path where Java will be installed. It will be later reffered to as `java_path`. Other options may be left with default values.
+
 ![java_path windows](./res/java_path_windows.png)
-1. Install Java and press `Close` after installation is over.
-1. Press `Win + r`.
-1. Type in `SystemPropertiesAdvanced` and hit `Enter`.
-1. In this window select `Environment Variables...`.
+
+7. Install Java and press `Close` after installation is over.
+8. Press `Win + r`.
+9. Type in `SystemPropertiesAdvanced` and hit `Enter`.
+10. In this window select `Environment Variables...`.
+
 ![Environment variables location](./res/env_vars_opener_windows.png)
-1. In the `User variables for <username>` select `Path` and press `Edit`.
+
+11. In the `User variables for <username>` select `Path` and press `Edit`.
+
 ![How to edit Path](./res/path_env_var_windows.png)
-1. Press `New` and type in your `java_path`+`\bin` into the prompt (refer to the screenshot).
+
+12. Press `New` and type in your `java_path`+`\bin` into the prompt (refer to the screenshot).
+
 ![New Path entry](./res/new_path_entry_windows.png)
-1. Hit `Ok` in all 3 windows to save your changes.
-1. Press `Win + r` once again.
-1. Type in `cmd` and hit `Enter`.
-1. In the newly opened window type `javac --version`. If the output is similar to the screenshot below, you're all set up with Java.
+
+13. Hit `Ok` in all 3 windows to save your changes.
+14. Press `Win + r` once again.
+15. Type in `cmd` and hit `Enter`.
+16. In the newly opened window type `javac --version`. If the output is similar to the screenshot below, you're all set up with Java.
+
 ![javac successful output](./res/javac_output_windows.png)
