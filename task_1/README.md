@@ -61,3 +61,14 @@ Personally I'd recommend using JDK version 11. It's a widely supported version. 
 16. In the newly opened window type `javac --version`. If the output is similar to the screenshot below, you're all set up with Java.
 
 ![javac successful output](./res/javac_output_windows.png)
+
+### Linux
+When speaking about Linux, I'll suppose you're using Ubuntu or Ubuntu-based distribution, that has `apt` package manager. Otherwise, I guess, you're experienced enough to set-up Java without this guide.
+
+Development life is much easier for Linux users. So, if you use Linux, your setup process is just 3 steps away:
+1. Open terminal or terminal emulator.
+2. Type in `sudo apt update` to update your packages list.
+3. Type in `sudo apt install -y openjdk-11-jdk`.
+4. Once the installation is over, in the same terminal type `javac --version`. If the output is similar to the screenshot below, you're all set up with Java.
+
+![javac successful output](./res/javac_output_linux.png)
