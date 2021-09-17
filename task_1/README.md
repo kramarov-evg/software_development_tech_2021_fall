@@ -17,7 +17,9 @@ If you already have some of these installed/set-up, you can skip those and jump 
 1. [Install Java](#install-java)
     1. [Windows](#java-for-windows)
     2. [Linux](#java-for-linux)
-2. Install IDE
+2. [Install IDE](#install-ide)
+    1. [Windows](#idea-for-windows)
+    1. [Linux](#idea-for-linux)
 3. Get code
 4. Run project
 
@@ -74,3 +76,36 @@ Development life is much easier for Linux users. So, if you use Linux, your setu
 4. Once the installation is over, in the same terminal type `javac --version`. If the output is similar to the screenshot below, you're all set up with Java.
 
 ![javac successful output](./res/javac_output_linux.png)
+
+## Install IDE
+For the complete newbies, IDE stands for "Integrated Development Environment". It is, basically a set of utils, packed together into a single app, that simplifies programming a lot. It manages launching programs for you, linting code, debugging and all other stuff you may find useful, while developing your app.
+
+I guess, during this course we will all use IntelliJ IDEA. Thus, when I mention "IDE", "IDEA", "IntelliJ" in this guide or somewhere else, it all means the same: IntelliJ IDEA. It may be overfilled with features for a complete beginner, but it is a golden IDE standard for enterprise development. Other possible and popular options are Eclipse, Netbeans and even VSCode with plugins. The latter is not actually an IDE, but a pumped up code editor, but it has most of the features, you'd expect from an IDE. This guide will bedevoted to IDEA only.
+
+### IDEA for Windows
+1. Go to the [official download page](https://www.jetbrains.com/idea/download/#section=windows) for the IDEA. and click `Download` under the "Community" edition option. This version is completely free-to-use, though it lacks some enterprise-important features. But for this course they won't be needed.
+
+![IDEA download page](./res/idea_download_page_windows.png)
+
+2. Once the download is over, launch the downloaded installer and proceed the installation. You may leave everything unconfigured during the installation, but I prefer to tick options `Create Desktop Shortcut` and `Update Context Menu`. *I strongly **not** recommend you to tick `Update PATH Variable`*. Unless, of course, you know the consequences and understand, why you need this.
+
+3. After installation is over, launch IDEA to check that everything installed correctly. If, after accepting agreement and answering statistics prompt, you see a window, like one on the screenshot below, you have successfully installed your IDE.
+
+![IDEA launch window](./res/idea_success_windows.png)
+
+### IDEA for Linux
+1. Go to the [official download page](https://www.jetbrains.com/idea/download/#section=windows) for the IDEA. and click `Download` under the "Community" edition option. This version is completely free-to-use, though it lacks some enterprise-important features. But for this course they won't be needed.
+
+![IDEA download page](./res/idea_download_page_linux.png)
+
+2. Once the download is over, open your terminal, `cd` into the directory, where idea downloaded and run `tar xzf <downloaded file name>`, where `<downloaded file name>` is the name of the `.tar.gz` archive ypu downloaded in 1st step.
+
+3. When this command succeeds, run `sudo mv ./<extracted directory name> /opt/IDEA`, where `<extracted directory name>` is the name of the directory, that got extracted in step 2.
+
+4. Run `/opt/IDEA/bin/idea.sh` to launch the IDE. After accepting agreement and answering statistics prompt, you'll see a window like one on the screenshot, which means everything ok.
+
+![IDEA launch window](./res/idea_success_linux.png)
+
+5. [**Optional, but strongly recommended**] Upon the first launch, it's strongly recommended, that you create a desktop entry, so that you don't need to launch idea via terminal each time. Location of this option is shown below.
+
+![IDEA desktop entry create](./res/idea_option_on_first_launch_linux.png)
