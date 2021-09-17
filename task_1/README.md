@@ -14,7 +14,9 @@ By the time this commit was made, we stopped on the moment, where we created bas
 # How to setup Java and run project from 1st lesson
 ## Contents
 If you already have some of these installed/set-up, you can skip those and jump straight into action.
-1. Install Java
+1. [Install Java](#install-java)
+    1. [Windows](#java-for-windows)
+    2. [Linux](#java-for-linux)
 2. Install IDE
 3. Get code
 4. Run project
@@ -24,7 +26,7 @@ First of all you need a Java JDK (stands for Java Development Kit). It includes 
 
 Personally I'd recommend using JDK version 11. It's a widely supported version. Actually the latest version is 17th, but 11th is the one, 99% of all apps will support. Personally I keep to this version and have no problems with it. Thos whole guide will be for Java 11.
 
-### Windows
+### Java for Windows
 1. Go to the [official website download page](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) and download version 11.0.11 as `.exe` for Windows 10 x64 (Refer to the screenshot below).
 
 ![Download option selection](./res/java_download_page_windows.png)
@@ -62,7 +64,7 @@ Personally I'd recommend using JDK version 11. It's a widely supported version. 
 
 ![javac successful output](./res/javac_output_windows.png)
 
-### Linux
+### Java for Linux
 When speaking about Linux, I'll suppose you're using Ubuntu or Ubuntu-based distribution, that has `apt` package manager. Otherwise, I guess, you're experienced enough to set-up Java without this guide.
 
 Development life is much easier for Linux users. So, if you use Linux, your setup process is just 3 steps away:
