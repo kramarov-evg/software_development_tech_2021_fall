@@ -1,16 +1,3 @@
-# Task 1
-In this task we were supposed to program an artificial environment. There are 3 types of inhabitants in this environment:
-- Wolves;
-- Rabbits;
-- Plants
-
-Naturally, wolves eat rabbits, rabbits eat plants, plants grow randomly. Animals can move and spend energy for movements.
-
-By the time this commit was made, we stopped on the moment, where we created basic classes for wolves, rabbits, plants and a field (it represents an environment they all live in). The task is to demonstrate thee code working.
-
-***Below is the guide on how to achieve that, starting from the very beginning***
-
-
 # How to setup Java and run project from 1st lesson
 ## Contents
 If you already have some of these installed/set-up, you can skip those and jump straight into action.
@@ -20,8 +7,6 @@ If you already have some of these installed/set-up, you can skip those and jump 
 2. [Install IDE](#install-ide)
     1. [Windows](#idea-for-windows)
     1. [Linux](#idea-for-linux)
-3. Get code
-4. Run project
 
 ## Install Java
 First of all you need a Java JDK (stands for Java Development Kit). It includes Java compiler, standard library and JRE (Java Runtime Environment). In short, JDK is a kit for development on Java, JRE is the runtime environment, where Java program is executed.
