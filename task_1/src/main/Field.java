@@ -4,13 +4,13 @@ package main;
 public class Field {
     Object[][] cell;
     String[][] title; // the name of cell (if its with wolf/ rabbit/ plant or empty)
-    private final int h, w;
+    public int h, w;
     /**
      * numOfWolves - number of Wolves,
      * numOfRabbits - number of Rabbits,
      * numOfPlants - number of Plants
      */
-    private int numOfWolves, numOfRabbits, numOfPlants;
+    public int numOfWolves, numOfRabbits, numOfPlants;
 
     public Field(int h, int w, int numOfWolves, int numOfRabbits, int numOfPlants) {
         this.h = h;
