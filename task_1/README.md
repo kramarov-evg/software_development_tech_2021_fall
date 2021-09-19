@@ -6,106 +6,78 @@ In this task we were supposed to program an artificial environment. There are 3 
 
 Naturally, wolves eat rabbits, rabbits eat plants, plants grow randomly. Animals can move and spend energy for movements.
 
-By the time this commit was made, we stopped on the moment, where we created basic classes for wolves, rabbits, plants and a field (it represents an environment they all live in). The task is to demonstrate thee code working.
+By the time this commit was made, we stopped on the moment, where we created basic classes for wolves, rabbits, plants and a field (it represents an environment they all live in). The task is to demonstrate the code compiling and running successfully.
 
-***Below is the guide on how to achieve that, starting from the very beginning***
+***Below is the guide on how to achieve that.***
 
+## To start with
+It's supposed, that you have Java and InteeliJ IDEA IDE installed on your machine. If not, refer to the prerequisites section of this repository ([here](https://github.com/kramarov-evg/software_development_tech_2021_fall/tree/master/prerequisites))
 
-# How to setup Java and run project from 1st lesson
 ## Contents
-If you already have some of these installed/set-up, you can skip those and jump straight into action.
-1. [Install Java](#install-java)
-    1. [Windows](#java-for-windows)
-    2. [Linux](#java-for-linux)
-2. [Install IDE](#install-ide)
-    1. [Windows](#idea-for-windows)
-    1. [Linux](#idea-for-linux)
-3. Get code
-4. Run project
+1. [Get the project](#getting-the-project)
+    1. [By yourself](#creating-a-project)
+    2. [From this repository](#downloading-project)
+2. [Run the code](#running-the-code)
 
-## Install Java
-First of all you need a Java JDK (stands for Java Development Kit). It includes Java compiler, standard library and JRE (Java Runtime Environment). In short, JDK is a kit for development on Java, JRE is the runtime environment, where Java program is executed.
+## Getting the project
+There are 2 main options of how to get a working project:
+- Create an IDEA project by yourself;
+- Get it from this repository;
 
-Personally I'd recommend using JDK version 11. It's a widely supported version. Actually the latest version is 17th, but 11th is the one, 99% of all apps will support. Personally I keep to this version and have no problems with it. This whole guide will be for Java 11.
+Personally I recommend the first way, as you should know, how to do this later. The second should be used only if you messed something up somehow, trying to create a project yourself.
+### Creating a project
+To create a project, follow these steps:
+1. First open your IDEA.
+2. **[Possible]** If you worked on some other project in IDEA before, your IDE may start with this project open, not the welcome screen (first screenshot below). To get back to the welcome screen, choose `File -> Close project` in the upper panel (second screenshot below).
 
-### Java for Windows
-1. Go to the [official website download page](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) and download version 11.0.11 as `.exe` for Windows 10 x64 (Refer to the screenshot below).
+![IDEA opened with project](./res/idea_project_opened.png)
 
-![Download option selection](./res/java_download_page_windows.png)
+![Close project in IDEA](./res/idea_close_project.png)
 
-2. Accept agreement.
+3. Once you see IDEA's welcome screen, hit the `New project` button
 
-![Agreement prompt screenshot](./res/java_download_page_agreement_windows.png)
+![IDEA welcome screen](./res/idea_welcome_screen.png)
 
-3. Log into your Oracle account or create one, if you don't have it yet.
-4. Once you log in, your download should start.
-5. Once the download is over, head to the folder you saved the installer to and run it.
-6. After running the installer, remember or write down the path where Java will be installed. It will be later reffered to as `java_path`. Other options may be left with default values.
+4. In the left pane select `Java` for the project type, **NOT** `JavaFX`! In the `Project SDK` line should be your installed JDK detected (first screenshot below). If JDK is not detected automatically, specify a path to your JDK installation manually (second screenshot below). If none of these help, contact me, I'll try to figure out your issue.
 
-![java_path windows](./res/java_path_windows.png)
+![IDEA project creation project type + JDK](./res/idea_new_project_step_1.png)
 
-7. Install Java and press `Close` after installation is over.
-8. Press `Win + r`.
-9. Type in `SystemPropertiesAdvanced` and hit `Enter`.
-10. In this window select `Environment Variables...`.
+![IDEA project creation specify JDK](./res/idea_new_project_step_1.1.gif)
 
-![Environment variables location](./res/env_vars_opener_windows.png)
+5. After specifying JDK, Click `Next`. Leave `Create project from template` box unticked. Procced next.
+6. On the next step specify a name for your project and choose, where it will be located. Once done, click `Finish`.
+7. Once your project is created, you will see a window, simila to the one below:
 
-11. In the `User variables for <username>` select `Path` and press `Edit`.
+![IDEA empty project](./res/idea_empty_project.png)
 
-![How to edit Path](./res/path_env_var_windows.png)
+8. In the left pane right-click the `src` folder and select `New -> package`. Then specify a name for a new package. I chose `main` for this tutorial. Packages are one of Java ways of controlling scopes of visibility. A bit similar to namespaces in C++. For more information on packages just google.
 
-12. Press `New` and type in your `java_path`+`\bin` into the prompt (refer to the screenshot).
+![IDEA add package](./res/idea_add_package.gif)
 
-![New Path entry](./res/new_path_entry_windows.png)
+9. After adding the package, right-click that package in the left pane and select `New -> Java Class`. Give this class a name. Let's start with the `Plant` class. Once done, you'll see IDEA generated some boilerplate code for you. Neat feature.
 
-13. Hit `Ok` in all 3 windows to save your changes.
-14. Press `Win + r` once again.
-15. Type in `cmd` and hit `Enter`.
-16. In the newly opened window type `javac --version`. If the output is similar to the screenshot below, you're all set up with Java.
+![IDEA add first class](./res/idea_add_class.gif)
 
-![javac successful output](./res/javac_output_windows.png)
+10. Add classes `Wolf`, `Rabbit`, `Field` and `Main` the same way. They should all be located in the `main` package for now
+11. Fill them with code from the corresponding classes from this repository ([from here](https://github.com/kramarov-evg/software_development_tech_2021_fall/tree/master/task_1/src)). After this procedure ALL `.class` files in repository and in your project should look **EXACTLY** the same.
+12. When all code is in its place, you're done
 
-### Java for Linux
-When speaking about Linux, I'll suppose you're using Ubuntu or Ubuntu-based distribution, that has `apt` package manager. Otherwise, I guess, you're experienced enough to set-up Java without this guide.
+### Downloading project
+Another option to get the working project is to get it from this repository. I will not cover `git clone` option here, as Git is a bit too serious instrument to be explained here. Moreover, I guess, those of you who are familiar with Git won't need this guie at all.
 
-Development life is much easier for Linux users. So, if you use Linux, your setup process is just 3 steps away:
-1. Open terminal or terminal emulator.
-2. Type in `sudo apt update` to update your packages list.
-3. Type in `sudo apt install -y openjdk-11-jdk`.
-4. Once the installation is over, in the same terminal type `javac --version`. If the output is similar to the screenshot below, you're all set up with Java.
+So, to get the project from this repo, follow these steps:
+1. Go to the GitHub repository root ([here](https://github.com/kramarov-evg/software_development_tech_2021_fall)).
+2. Click `Code -> Download ZIP`. This will download the whole repository as a .zip archive.
 
-![javac successful output](./res/javac_output_linux.png)
+![Download repo .zip](./res/github_repo_download.png)
 
-## Install IDE
-For the complete newbies, IDE stands for "Integrated Development Environment". It is, basically a set of utils, packed together into a single app, that simplifies programming a lot. It manages launching programs for you, linting code, debugging and all other stuff you may find useful, while developing your app.
+3. Extract the archive and navigate to the freshly-extracted folder.
+4. Locate folder `task_1` inside it.
+5. Right-click it and select `Open with... -> IntelliJ IDEA`. It will open the folder as an idea project.
+6. Once IDEA project opens, you're done
 
-I guess, during this course we will all use IntelliJ IDEA. Thus, when I mention "IDE", "IDEA", "IntelliJ" in this guide or somewhere else, it all means the same: IntelliJ IDEA. It may be overfilled with features for a complete beginner, but it is a golden IDE standard for enterprise development. Other possible and popular options are Eclipse, Netbeans and even VSCode with plugins. The latter is not actually an IDE, but a pumped up code editor, but it has most of the features, you'd expect from an IDE. This guide will bedevoted to IDEA only.
+## Running the code
 
-### IDEA for Windows
-1. Go to the [official download page](https://www.jetbrains.com/idea/download/#section=windows) for the IDEA. and click `Download` under the "Community" edition option. This version is completely free-to-use, though it lacks some enterprise-important features. But for this course they won't be needed.
+To run the code, in the left pane navigate to `src -> main -> Main.java`. In the left column of the code editor there should be 2 green triangles, similar to `Play` button symbols. Push the one, which is on the same line with the class definition. This will build the project and launch it.
 
-![IDEA download page](./res/idea_download_page_windows.png)
-
-2. Once the download is over, launch the downloaded installer and proceed the installation. You may leave everything unconfigured during the installation, but I prefer to tick options `Create Desktop Shortcut` and `Update Context Menu`. *I strongly **not** recommend you to tick `Update PATH Variable`*. Unless, of course, you know the consequences and understand, why you need this.
-
-3. After installation is over, launch IDEA to check that everything installed correctly. If, after accepting agreement and answering statistics prompt, you see a window, like one on the screenshot below, you have successfully installed your IDE.
-
-![IDEA launch window](./res/idea_success_windows.png)
-
-### IDEA for Linux
-1. Go to the [official download page](https://www.jetbrains.com/idea/download/#section=windows) for the IDEA. and click `Download` under the "Community" edition option. This version is completely free-to-use, though it lacks some enterprise-important features. But for this course they won't be needed.
-
-![IDEA download page](./res/idea_download_page_linux.png)
-
-2. Once the download is over, open your terminal, `cd` into the directory, where idea downloaded and run `tar xzf <downloaded file name>`, where `<downloaded file name>` is the name of the `.tar.gz` archive ypu downloaded in 1st step.
-
-3. When this command succeeds, run `sudo mv ./<extracted directory name> /opt/IDEA`, where `<extracted directory name>` is the name of the directory, that got extracted in step 2.
-
-4. Run `/opt/IDEA/bin/idea.sh` to launch the IDE. After accepting agreement and answering statistics prompt, you'll see a window like one on the screenshot, which means everything ok.
-
-![IDEA launch window](./res/idea_success_linux.png)
-
-5. [**Optional, but strongly recommended**] Upon the first launch, it's strongly recommended, that you create a desktop entry, so that you don't need to launch idea via terminal each time. Location of this option is shown below.
-
-![IDEA desktop entry create](./res/idea_option_on_first_launch_linux.png)
+![Launch IDEA project](./res/idea_launch_project.gif)
